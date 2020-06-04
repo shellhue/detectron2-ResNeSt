@@ -16,7 +16,13 @@ from predictor import VisualizationDemo
 # constants
 WINDOW_NAME = "COCO detections"
 
-
+def dump_detection(frame, detections):
+    # frame, -1, bb_left, bb_top, bb_width, bb_height, conf, -1, -1, -1.
+    results = []
+    r = "{},-1,{:.2f},{:.2f},{:.2f},{:.2f},{:.4f},-1,-1,-1".format(frame, b[0], b[1], b[2], b[3], b[4])
+    results.append(r)
+    return results
+     
 def setup_cfg(args):
     # load config from file and command-line arguments
     cfg = get_cfg()
@@ -86,7 +92,7 @@ if __name__ == "__main__":
             # use PIL, to be consistent with evaluation
             img = read_image(path, format="BGR")
             start_time = time.time()
-            predictions, visualized_output = demo.run_on_image(img)
+            predictions, visualized_output = demo.run_on_image(img)z
             logger.info(
                 "{}: {} in {:.2f}s".format(
                     path,
