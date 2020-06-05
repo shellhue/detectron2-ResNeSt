@@ -36,7 +36,9 @@ python projects/hie_tmp/train_net.py \
 
 # hie_part_val       nms0.5     nms0.7
 # model_0009999.pth  -          30.663
+# model_0029999.pth  -          26.7919
 
 
 # hie_part_test      nms0.5     nms0.7
 # model_0009999.pth  -          28.2192
+# model_0029999.pth  -          25.718

@@ -4,6 +4,7 @@ from detectron2.data.datasets.register_coco import register_coco_instances
 from detectron2.data.datasets.builtin_meta import _get_builtin_metadata
 
 _HIE_DATASETS = {
+    # 数据集名字 : (对应的图片目录， 对应的json文件)
     "hie_train": ("hie_coco_all/train", "hie_coco_all/annotations/instances_train.json"),
     "hie_val": ("hie_coco_all/val", "hie_coco_all/annotations/instances_val.json"),
     "hie_test": ("hie_coco_all/test", "hie_coco_all/annotations/instances_test.json"),

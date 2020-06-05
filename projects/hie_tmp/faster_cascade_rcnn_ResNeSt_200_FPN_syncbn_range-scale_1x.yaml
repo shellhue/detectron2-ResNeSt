@@ -38,4 +38,4 @@ TEST:
     ENABLED: True
 DATASETS:
   TRAIN: ("hie_part_train",)
-  TEST: ("hie_test",)
+  TEST: ("hie_part_val",)
