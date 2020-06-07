@@ -154,10 +154,10 @@ if __name__ == "__main__":
     print(len(all_imgs))
     all_imgs.extend(imgs_from_nohie_datasets)
     print(len(all_imgs))
-    all_imgs.extend(imgs_from_hie_datasets)
-    print(len(all_imgs))
+    # all_imgs.extend(imgs_from_hie_datasets)
+    # print(len(all_imgs))
 
-    imgs2coco(all_imgs, output_dataset_path="./pretrain_and_hie_coco", ds_type="train")
+    imgs2coco(all_imgs, output_dataset_path="./pretrain_only_coco", ds_type="train")
 
-    # 2. 生成仅含hie的finetune coco格式数据集
-    imgs2coco(imgs_from_hie_datasets, output_dataset_path="./hie_finetune_coco", ds_type="train")
+    # # 2. 生成仅含hie的finetune coco格式数据集
+    # imgs2coco(imgs_from_hie_datasets, output_dataset_path="./hie_finetune_coco", ds_type="train")

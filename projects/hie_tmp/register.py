@@ -5,6 +5,8 @@ from detectron2.data.datasets.builtin_meta import _get_builtin_metadata
 
 _HIE_DATASETS = {
     # 数据集名字 : (对应的图片目录， 对应的json文件)
+    "pretrain_and_hie_train": ("pretrain_and_hie_coco/train", "pretrain_and_hie_coco/annotations/instances_train.json"),
+    "pretrain_and_hie_test": ("pretrain_and_hie_coco/test", "pretrain_and_hie_coco/annotations/instances_test.json"),
     "hie_train": ("hie_coco_all/train", "hie_coco_all/annotations/instances_train.json"),
     "hie_val": ("hie_coco_all/val", "hie_coco_all/annotations/instances_val.json"),
     "hie_test": ("hie_coco_all/test", "hie_coco_all/annotations/instances_test.json"),

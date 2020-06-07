@@ -23,19 +23,19 @@ MODEL:
   PIXEL_MEAN: [123.68, 116.779, 103.939]
   PIXEL_STD: [58.393, 57.12, 57.375]
 SOLVER:
-  IMS_PER_BATCH: 6  
+  IMS_PER_BATCH: 8
   BASE_LR: 0.001
-  STEPS: (44000, 58000)
-  MAX_ITER: 44000
+  STEPS: (120000, 160000)
+  MAX_ITER: 180000
   LR_SCHEDULER_NAME: WarmupCosineLR
 INPUT:
   MIN_SIZE_TRAIN: (640, 800)
   MIN_SIZE_TRAIN_SAMPLING: "range"
-  MAX_SIZE_TRAIN: 1333
+  MAX_SIZE_TRAIN: 1280
   FORMAT: "RGB"
 TEST:
   PRECISE_BN:
     ENABLED: True
 DATASETS:
-  TRAIN: ("hie_part_train",)
-  TEST: ("hie_part_val",)
+  TRAIN: ("pretrain_and_hie_train",)
+  TEST: ("pretrain_and_hie_test",)

@@ -35,7 +35,8 @@ export DETECTRON2_DATASETS="/home/huangzeyu/detectron2/datasets"
 #     SOLVER.IMS_PER_BATCH 2 MODEL.WEIGHTS faster_cascade_rcnn_ResNeSt_200_FPN_syncbn_range-scale_1x-1be2a87e.pth
 
 python projects/hie_tmp/train_net.py \
-    --num-gpus=6 \
+    --num-gpus=8 \
     --dist-url='tcp://127.0.0.1:50160' \
+    --resume \
     --config-file=projects/hie_tmp/faster_cascade_rcnn_ResNeSt_200_FPN_syncbn_range-scale_1x.yaml \
-    SOLVER.IMS_PER_BATCH 6 MODEL.WEIGHTS faster_cascade_rcnn_ResNeSt_200_FPN_syncbn_range-scale_1x-1be2a87e.pth OUTPUT_DIR output/resnest_hie_part
+    SOLVER.IMS_PER_BATCH 8 MODEL.WEIGHTS faster_cascade_rcnn_ResNeSt_200_FPN_syncbn_range-scale_1x-1be2a87e.pth OUTPUT_DIR output/resnest_hie_pretrain DATASETS.TRAIN '("pretrain_and_hie_train",)' DATASETS.TEST '("pretrain_and_hie_test",)'
